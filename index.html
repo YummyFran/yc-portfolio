@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Fran Palomares</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="src/script.js" defer></script>
+</head>
+<body>
+    <header id="home" class="snap">
+        <div class="pop-up">
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <div class="icon">YC</div>
+                        <div class="brandname">Yummy & Crismark</div>
+                    </div>
+                    <div class="links">
+                        <a href="#">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <a href="https://github.com/YummyFran" class="visit" target="_blank">
+                        <p>Visit Me</p>
+                        <img src="assets/github.svg" alt="github">
+                    </a>
+                </nav>
+                <div class="banner center">
+                    <div class="heading">
+                        <div class="texts">
+                            <p class="subhead">Hi there!</p>
+                            <h1 class="head">I'm <div id="name"></div></h1>
+                            <p class="subhead">a <span id="desc">web developer</span></p>
+                        </div>
+                        <div class="purpose">
+                            <button class="cv">Download CV</button>
+                            <a href="#projects" class="projects">View Projects</a>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="socials">
+                            <a href="#github">
+                                <img src="assets/github.svg" alt="github">
+                            </a>
+                            <a href="facebook">
+                                <img src="assets/facebook.svg" alt="facebook">
+                            </a>
+                            <a href="instagram">
+                                <img src="assets/instagram.svg" alt="instagram">
+                            </a>
+                        </div>
+                        <a class="scroll-down" href="#about">
+                            <div class="arrow"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="navigation snap">
+        <div class="container">
+            <nav>
+                <a href="#">
+                    <div class="logo">
+                        <div class="icon">YC</div>
+                        <div class="brandname">Yummy & Crismark</div>
+                    </div>
+                </a>
+                <div class="links">
+                    <a href="#">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <a href="https://github.com/YummyFran" class="visit" target="_blank" onclick="window.open('https://github.com/crismark025'); alert('Please turn off ad blocker to open both links.')">
+                    <p>Visit Me</p>
+                    <img src="assets/github.svg" alt="github">
+                </a>
+            </nav>
+        </div>
+    </div>
+    <section class="about snap" id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <input type="checkbox" class="changeCard" id="changecard">
+            <label for="changecard" class="cardbtn"></label>
+            <div class="card yummy">
+                <div class="one-third">
+                    <div class="photo"></div>
+                </div>
+                <div class="two-third">
+                    <div class="details pop">
+                        <div class="title">
+                            <h3 class="name">Yummy Fran Palomares</h3>
+                            <p class="subtitle">BSIT Student</p>
+                        </div>
+                        <div class="short-desc">
+                            <p class="desc">
+                                A young, 1st year programmer of Cordova Public College
+                                 who is aiming for accomplishment  in becoming a Web Developer.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <div class="title jump">SKILLS</div>
+                        <div class="icons pop">
+                            <img class="hov" src="assets/html5.svg" alt="html 5" title="html 5">
+                            <img class="hov" src="assets/css3.svg" alt="css 3" title="css 3">
+                            <img class="hov" src="assets/js.svg" alt="js" title="javascript">
+                            <img class="hov" src="assets/react.svg" alt="react" title="react js">
+                            <img class="hov" src="assets/nodejs.svg" alt="node js" title="node js">
+                        </div>
+                    </div>
+                    <div class="quote pop">
+                        <p class="ae"><i>Strive not to be a success, but rather to be a value.<br>-Albert Einstein</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card crismark">
+                <div class="one-third">
+                    <div class="photo"></div>
+                </div>
+                <div class="two-third">
+                    <div class="details pop">
+                        <div class="title">
+                            <h3 class="name">Crismark Torejas</h3>
+                            <p class="subtitle">BSIT Student</p>
+                        </div>
+                        <div class="short-desc">
+                            <p class="desc">
+                                A young, highly collaborative developer of
+                                Cordova Public College who is looking forward to be a web developer
+                                and bepart of a web development team.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <div class="title jump">SKILLS</div>
+                        <div class="icons pop">
+                            <img class="hov" src="assets/html5.svg" alt="html 5" title="html 5">
+                            <img class="hov" src="assets/css3.svg" alt="css 3" title="css 3">
+                            <img class="hov" src="assets/js.svg" alt="js" title="javascript">
+                        </div>
+                    </div>
+                    <div class="quote pop">
+                        <p class="ae"><i>No one can hit their target with their eyes closed.<br>-So Focus</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects snap" id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-container">
+                <div class="thumbnails">
+                    <a class="thumbnail">
+                        <div class="picture coming-soon"></div>
+                        <div class="descriptions">
+                            <div class="act-title">
+                                <b>Coming soon...</b>
+                            </div>
+                            <p class="act-details">
+                                Stay tuned!
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://yummyfran.github.io/Activity-1/" class="thumbnail" target="_blank">
+                        <div class="picture" id="activity1"></div>
+                        <div class="descriptions">
+                            <div class="act-title">
+                                <b>New York Central Park</b>
+                            </div>
+                            <p class="act-details">
+                                Central Park is an urban park in New York City located between the Upper West and Upper East Sides of Manhattan.
+                            </p>
+                        </div>
+                    </a>
+                    <a class="thumbnail">
+                        <div class="picture coming-soon"></div>
+                        <div class="descriptions">
+                            <div class="act-title">
+                                <b>under Construction...</b>
+                            </div>
+                            <p class="act-details">
+                                Stay tuned!
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot current"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact snap" id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+        </div>
+    </section>
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>

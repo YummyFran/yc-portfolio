@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;800&display=swap');
+
+:root {
+    --page-width: 69vw;
+    --accent: #FFE5B4;
+    --black: #3E3B3B;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    outline-color: var(--accent);
+    transition: 0.3s;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 69vw;
+    padding: 1rem 0;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.snap {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    padding-top: calc(50px + 1rem);
+}
+
+/*==========================
+        Header CSS
+==========================*/
+
+@keyframes switch-bg {
+    0%,49% {
+        background-image: url('../assets/banner.jpg');
+    }
+    50%,99% {
+        background-image: url('../assets/crismark.jpg');
+    }
+}
+
+header {
+    background-image: url('../assets/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: switch-bg 6s infinite;
+}
+
+.pop-up {
+    background-color: rgba(18, 18, 18, 0.3);
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    height: calc(100vh - 50px - 16px);
+    gap: 5rem;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+/*===== Nav =====*/
+
+nav {
+    top: 1rem;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+nav .logo .icon {
+    height: 40px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 800;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+nav .logo:hover,
+nav .logo:hover .icon {
+    color: var(--accent);
+    border-color: var(--accent);
+    transition: 0.1s;
+}
+
+nav .links {
+    display: flex;
+    gap: 6rem;
+}
+
+nav .links a {
+    padding: 1rem 0.5rem;
+    border-bottom: 2px solid transparent;
+}
+
+nav .links a:hover {
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+nav .visit {
+    background-color: var(--accent);
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    gap: 0.5rem;
+    border: 2px solid transparent;
+}
+
+nav .visit:hover p {
+    color: var(--accent);
+}
+
+nav .visit:hover img {
+    filter: invert(82%) sepia(10%) saturate(1298%) hue-rotate(338deg) brightness(111%) contrast(104%);
+}
+
+nav .visit p {
+    color: var(--black);
+    margin: 0;
+}
+
+/*===== Heading =====*/
+
+@keyframes type {
+    0%, 100% {
+        width: 0;
+    }
+    25% {
+        content: "Yummy Fran";
+        width: 100%;
+    }
+    50% {   
+        width: 0;
+    }
+    75% {
+        width: 100%;
+    }
+    100% {
+        content: "Crismark";
+    }
+}
+
+@keyframes blink {
+    from { border-color: transparent }
+    to { border-color: var(--accent); }
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.heading .texts {
+    cursor: default;
+    user-select: none;
+}
+
+.heading .head {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 5rem;
+    margin: 0;
+    margin-bottom: 0.4rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.heading .texts #name {
+    border-right: 2px solid var(--accent);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+}
+
+.heading .texts #name::after {
+    content: 'Yummy Fran';
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+}
+
+#name, #name::after {
+    animation: type 6s infinite,
+        blink .8s forwards infinite;
+}
+
+.heading .subhead {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+}
+
+.heading .subhead span {
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+/*===== Buttons =====*/
+
+.heading .purpose {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.heading .purpose * {
+    border-radius: 8px;
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heading .purpose .cv {
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.heading .purpose .cv:hover {
+    background-color: var(--accent);
+    color: var(--black);
+    border: none;
+}
+
+.heading .purpose .projects {
+    background-color: var(--accent);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading .purpose .projects:hover,
+nav .visit:hover {
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+/*===== Socials =====*/
+
+.socials {
+    display: flex;
+    gap: 50px;
+    height: 20px;
+}
+
+.socials * * {
+    filter: invert(82%) sepia(10%) saturate(1298%) hue-rotate(338deg) brightness(111%) contrast(104%);
+}
+
+.socials * *:hover {
+    filter: invert(91%) sepia(4%) saturate(3081%) hue-rotate(345deg) brightness(85%) contrast(87%);
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*===== Scroll Icon =====*/
+
+@keyframes arrow {
+    from {
+        transform: translateY(-10%);
+    }
+    to {
+        transform: translateY(10%);
+    }
+}
+
+.scroll-down {
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.scroll-down:hover {
+    background-color: var(--accent);
+}
+
+.scroll-down:hover .arrow {
+    animation: arrow 0.6s infinite alternate;
+}
+
+.scroll-down:hover .arrow, 
+.scroll-down:hover .arrow::before,
+.scroll-down:hover .arrow::after {
+    background-color: var(--black);
+}
+
+.arrow, .arrow::before, .arrow::after {
+    transition: 0.3s;
+}
+
+.arrow {
+    width: 2px;
+    height: 55%;
+    background-color: var(--accent);
+}
+
+.arrow::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 50%;
+    background-color: var(--accent);
+    transform-origin: bottom left;
+    transform: translateY(100%) rotate(-45deg);
+}
+
+.arrow::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 50%;
+    background-color: var(--accent);
+    transform-origin: bottom right  ;
+    transform: rotate(45deg);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    color: var(--black);
+    opacity: 0;
+    pointer-events: none;
+    background-color: var(--black);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navigation .container {
+    padding: 0.5rem 0;
+}
+
+.navigation.show-nav {
+    opacity: 100%;
+    pointer-events: all;
+}
+
+/*==========================
+        About CSS
+==========================*/
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes swipe {
+    from {
+        top: 55%;
+    } to {
+        top: 40%;
+    }
+}
+
+@keyframes jump {
+    0%, 100% {
+        line-height: 6.5rem;
+    }
+    55% {
+        line-height: 8rem;
+    }
+}
+
+@keyframes iconJump {
+    0%, 100% {
+        scale: 1;
+    }
+    55% {
+        scale: 1.2;
+    }
+}
+
+.card.show-card {
+    animation: show 1s forwards;
+}
+
+.card.show-card .photo {
+    animation: swipe 1s forwards;
+}
+
+.card.show-card .pop {
+    animation: show 1s forwards 0.3s;
+}
+
+.card.show-card .jump {
+    animation: jump 0.7s ease-in-out;
+}
+
+.about {
+    height: 100vh;
+}
+
+.about .container {
+    position: relative;
+}
+
+.card.crismark {
+    display: none;
+    opacity: 100%;
+}
+
+.changeCard {
+    display: none;
+    margin: -13px;
+}
+
+.changeCard, .changeCard[type="checkbox"]:checked~.card.yummy {
+    display: none;
+}
+
+.changeCard, .changeCard[type="checkbox"]:checked~.card.crismark {
+    display: grid;
+}
+
+.changeCard, .changeCard[type="checkbox"]:checked~.cardbtn {
+    justify-content: end;
+}
+
+.changeCard, .changeCard[type="checkbox"]:checked~.cardbtn::after {
+    content: 'C';
+}
+
+.cardbtn {
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    height: 2rem;
+    width: 4rem;
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0.15rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cardbtn::after {
+    content: "Y";
+    height: 1.7rem;
+    width: 1.7rem;
+    background-color: var(--black);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.card {
+    height: 60vh;
+    width: 100%;
+    background-color: var(--black);
+    box-shadow: 5px 5px 0 0 var(--accent);
+
+    margin-top: 3rem;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+
+    opacity: 0;
+}
+
+.card .one-third {  
+    position: relative;
+}
+
+.yummy .one-third .photo { 
+    background-image: url('../assets/me.jpg');
+    background-position: center;
+}
+
+.crismark .one-third .photo { 
+    background-image: url('../assets/me2.jpg');
+    background-position: 50% 75%;
+}
+
+.one-third .photo {
+    background-size: cover;
+
+    box-shadow: 5px 5px 0 0 var(--accent);
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+}
+
+.card .two-third {
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 55% 45%;
+}
+
+.details {
+    color: var(--accent);
+    font-size: 0.8rem;
+    padding: 3rem 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+}
+
+.details .title .name {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.details .title .subtitle,
+.details .short-desc .desc {
+    margin: 0;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.skills .title {
+    position: absolute;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 6.5rem;
+    color: #4D4B4B;
+}
+
+.skills .icons {
+    display: flex;
+    gap: 1rem;
+    opacity: 0;
+}
+
+.skills .icons * {
+    height: 2rem;
+    filter: invert(82%) sepia(10%) saturate(1298%) hue-rotate(338deg) brightness(111%) contrast(104%);
+}
+
+.skills .icons *:hover {
+    animation: iconJump 0.7s ease-in-out;
+}
+
+.quote {
+    grid-column: span 2;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.quote .ae {
+    color: white;
+    position: relative;
+    margin: 0; 
+    transform: translate(-10%, -40%); 
+}
+
+.quote .ae::before {
+    content: '❝';
+    color: var(--accent);
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    font-size: 5rem;
+    line-height: 5rem;
+    opacity: 0.5;
+}
+
+.quote .ae::after {
+    content: '❞';
+    color: var(--accent);
+    position: absolute;
+    font-size: 5rem;
+    line-height: 5rem;
+    opacity: 0.5;
+}
+
+/*==========================
+        Projects CSS
+==========================*/
+
+.projects {
+    height: 100vh;
+    display: flex;
+}
+
+.project-container {
+    height: 65vh;
+    width: 100%;
+    padding: 0 3rem;
+
+    display: grid;
+    grid-template-rows: 90% auto;
+}
+
+.project-container .thumbnails {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    flex-flow: row;
+}
+
+.project-container .thumbnails::before {
+    content: '';
+    height: 7%;
+    aspect-ratio: 1;
+    position: absolute;
+    left: -5%;
+    rotate: 45deg;
+    border-bottom: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    cursor: pointer;
+}
+
+.project-container .thumbnails::after {
+    content: '';
+    height: 7%;
+    aspect-ratio: 1;
+    position: absolute;
+    right: -5%;
+    rotate: 45deg;
+    border-top: 2px solid var(--black);
+    border-right: 2px solid var(--black);
+    cursor: pointer;
+}
+
+.project-container .thumbnails .thumbnail {
+    height: 100%;
+    margin: 0 0.5rem;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px 0 rgb(172, 172, 172);
+
+    display: grid;
+    grid-template-rows: 65% 35%;
+}
+
+.project-container .thumbnails :nth-child(2) {
+    flex: 0 0 35%;
+}
+
+.project-container .thumbnails :not(:nth-child(2)) {
+    height: 90%;
+}
+
+.project-container .thumbnails .thumbnail .picture {
+    height: 100%;
+}
+
+.picture#activity1 {
+    background-image: url('../assets/nyc1.png');
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.picture.coming-soon {
+    background-image: url('../assets/logo.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+}
+
+.project-container .thumbnails .thumbnail:hover .picture {
+    scale: 1.2;
+}
+
+.project-container .thumbnails .thumbnail .descriptions {
+    background-color: var(--black);
+    padding: 0.5rem 1rem 1.5rem 1rem;
+    color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    z-index: 10;
+}
+
+.thumbnail .descriptions .act-title {
+    font-size: 1rem;
+    height: fit-content;
+}
+
+.thumbnail .descriptions .act-details {
+    font-size: 0.75rem;
+    margin: 0;
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    flex-grow: 1;
+}
+
+.project-container .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.project-container .dots .dot {
+    height: 0.7rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #d5d0d0;
+}
+
+.project-container .dots .dot.current {
+    height: 1rem;
+}
+
+/*==========================
+        Contact CSS
+==========================*/
+
+.contact {
+    height: 100vh;
+}
+
+/*==========================
+        Footer CSS
+==========================*/
+
+footer {
+    height: 50vh;
+    background-color: #4D4B4B;
+}
