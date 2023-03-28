@@ -49,20 +49,10 @@ section {
         Header CSS
 ==========================*/
 
-@keyframes switch-bg {
-    0%,49% {
-        background-image: url('../assets/banner.jpg');
-    }
-    50%,99% {
-        background-image: url('../assets/crismark.jpg');
-    }
-}
-
 header {
     background-image: url('../assets/banner.jpg');
     background-size: cover;
     background-position: center;
-    animation: switch-bg 6s infinite;
 }
 
 .pop-up {
@@ -158,30 +148,6 @@ nav .visit p {
 
 /*===== Heading =====*/
 
-@keyframes type {
-    0%, 100% {
-        width: 0;
-    }
-    25% {
-        content: "Yummy Fran";
-        width: 100%;
-    }
-    50% {   
-        width: 0;
-    }
-    75% {
-        width: 100%;
-    }
-    100% {
-        content: "Crismark";
-    }
-}
-
-@keyframes blink {
-    from { border-color: transparent }
-    to { border-color: var(--accent); }
-}
-
 .heading {
     color: white;
     text-align: center;
@@ -201,27 +167,6 @@ nav .visit p {
     line-height: 5rem;
     margin: 0;
     margin-bottom: 0.4rem;
-    display: flex;
-    gap: 1rem;
-}
-
-.heading .texts #name {
-    border-right: 2px solid var(--accent);
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-}
-
-.heading .texts #name::after {
-    content: 'Yummy Fran';
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-}
-
-#name, #name::after {
-    animation: type 6s infinite,
-        blink .8s forwards infinite;
 }
 
 .heading .subhead {
@@ -378,7 +323,7 @@ nav .visit:hover {
     background-color: var(--black);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 10;
 }
 
 .navigation .container {
@@ -453,60 +398,6 @@ nav .visit:hover {
     position: relative;
 }
 
-.card.crismark {
-    display: none;
-    opacity: 100%;
-}
-
-.changeCard {
-    display: none;
-    margin: -13px;
-}
-
-.changeCard, .changeCard[type="checkbox"]:checked~.card.yummy {
-    display: none;
-}
-
-.changeCard, .changeCard[type="checkbox"]:checked~.card.crismark {
-    display: grid;
-}
-
-.changeCard, .changeCard[type="checkbox"]:checked~.cardbtn {
-    justify-content: end;
-}
-
-.changeCard, .changeCard[type="checkbox"]:checked~.cardbtn::after {
-    content: 'C';
-}
-
-.cardbtn {
-    position: absolute;
-    top: 5rem;
-    right: 1rem;
-    height: 2rem;
-    width: 4rem;
-    border: 1px solid var(--black);
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    padding: 0 0.15rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.cardbtn::after {
-    content: "Y";
-    height: 1.7rem;
-    width: 1.7rem;
-    background-color: var(--black);
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 600;
-}
-
 .card {
     height: 60vh;
     width: 100%;
@@ -526,18 +417,10 @@ nav .visit:hover {
     position: relative;
 }
 
-.yummy .one-third .photo { 
-    background-image: url('../assets/me.jpg');
-    background-position: center;
-}
-
-.crismark .one-third .photo { 
-    background-image: url('../assets/me2.jpg');
-    background-position: 50% 75%;
-}
-
 .one-third .photo {
+    background-image: url('../assets/me.jpg');
     background-size: cover;
+    background-position: center;
 
     box-shadow: 5px 5px 0 0 var(--accent);
     position: absolute;
@@ -663,41 +546,15 @@ nav .visit:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: relative;
-    flex-flow: row;
-}
-
-.project-container .thumbnails::before {
-    content: '';
-    height: 7%;
-    aspect-ratio: 1;
-    position: absolute;
-    left: -5%;
-    rotate: 45deg;
-    border-bottom: 2px solid var(--black);
-    border-left: 2px solid var(--black);
-    cursor: pointer;
-}
-
-.project-container .thumbnails::after {
-    content: '';
-    height: 7%;
-    aspect-ratio: 1;
-    position: absolute;
-    right: -5%;
-    rotate: 45deg;
-    border-top: 2px solid var(--black);
-    border-right: 2px solid var(--black);
-    cursor: pointer;
 }
 
 .project-container .thumbnails .thumbnail {
     height: 100%;
+    border: 1px solid var(--black);
     margin: 0 0.5rem;
     flex: 1;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 4px 4px 8px 0 rgb(172, 172, 172);
 
     display: grid;
     grid-template-rows: 65% 35%;
@@ -710,28 +567,10 @@ nav .visit:hover {
 .project-container .thumbnails :not(:nth-child(2)) {
     height: 90%;
 }
-
+/* 
 .project-container .thumbnails .thumbnail .picture {
-    height: 100%;
-}
 
-.picture#activity1 {
-    background-image: url('../assets/nyc1.png');
-    background-position: center;
-    background-size: cover;
-    transition: 0.5s;
-}
-
-.picture.coming-soon {
-    background-image: url('../assets/logo.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(6px);
-}
-
-.project-container .thumbnails .thumbnail:hover .picture {
-    scale: 1.2;
-}
+} */
 
 .project-container .thumbnails .thumbnail .descriptions {
     background-color: var(--black);
@@ -740,7 +579,6 @@ nav .visit:hover {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
-    z-index: 10;
 }
 
 .thumbnail .descriptions .act-title {
@@ -783,6 +621,79 @@ nav .visit:hover {
 
 .contact {
     height: 100vh;
+}
+
+.contact-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: var(--black);
+    color: var(--accent);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 3rem;
+}
+
+.form .line1 {
+    display: flex;
+    gap: 1rem;
+}
+
+.form .line1 p {
+    margin: 0;
+}
+
+.form .line1 input {
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid var(--accent);
+    padding: 0 1rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif;    
+    background-color: transparent;
+    color: var(--accent);
+    
+}
+
+textarea {
+    padding: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accents)
+}
+
+*::placeholder {
+    color: var(--accent);
+}
+
+
+.contact-details {
+    background-color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.contact-details .contact-info {
+    background-color: var(--black);
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    
+    position: relative;
+    left: -2rem;
+}
+
+.send {
+    background-color: var(--accent);
+    border: none;
+    padding: 0.5rem;
+    margin-top: 2rem;
 }
 
 /*==========================
