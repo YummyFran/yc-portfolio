@@ -1,5 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;800&display=swap');
 
+@keyframes switch-bg {
+    0%,49% {    background-image: url('../assets/banner.jpg');  }
+    50%,99% {   background-image: url('../assets/crismark.jpg');}
+}
+@keyframes type {
+    0%, 100% {      width: 0;               }
+    25% {           content: "Yummy Fran";
+                    width: 100%;            }
+    50% {           width: 0;               }
+    75% {           width: 100%;            }
+    100% {          content: "Crismark";    }
+}
+@keyframes blink {
+    from {      border-color: transparent   }
+    to {        border-color: var(--accent);}
+}
+@keyframes arrow {
+    from {      transform: translateY(-10%);}
+    to {        transform: translateY(10%); }
+}
+@keyframes show {
+    from {  opacity: 0;     }
+    to {    opacity: 100%;  }
+}
+@keyframes swipe {
+    from {  top: 55%;       } 
+    to {    top: 40%;       }
+}
+@keyframes jump {
+    0%, 100% {  line-height: 6.5rem;    }
+    55% {       line-height: 8rem;      }
+}
+@keyframes iconJump {
+    0%, 100% {  scale: 1;   }
+    55% {       scale: 1.2; }
+}
+
+/*==========================
+        Global CSS
+==========================*/
+
 :root {
     --page-width: 69vw;
     --accent: #FFE5B4;
@@ -48,15 +89,6 @@ section {
 /*==========================
         Header CSS
 ==========================*/
-
-@keyframes switch-bg {
-    0%,49% {
-        background-image: url('../assets/banner.jpg');
-    }
-    50%,99% {
-        background-image: url('../assets/crismark.jpg');
-    }
-}
 
 header {
     background-image: url('../assets/banner.jpg');
@@ -157,30 +189,6 @@ nav .visit p {
 }
 
 /*===== Heading =====*/
-
-@keyframes type {
-    0%, 100% {
-        width: 0;
-    }
-    25% {
-        content: "Yummy Fran";
-        width: 100%;
-    }
-    50% {   
-        width: 0;
-    }
-    75% {
-        width: 100%;
-    }
-    100% {
-        content: "Crismark";
-    }
-}
-
-@keyframes blink {
-    from { border-color: transparent }
-    to { border-color: var(--accent); }
-}
 
 .heading {
     color: white;
@@ -305,15 +313,6 @@ nav .visit:hover {
 
 /*===== Scroll Icon =====*/
 
-@keyframes arrow {
-    from {
-        transform: translateY(-10%);
-    }
-    to {
-        transform: translateY(10%);
-    }
-}
-
 .scroll-down {
     height: 40px;
     width: 40px;
@@ -369,6 +368,8 @@ nav .visit:hover {
     transform: rotate(45deg);
 }
 
+/*===== Fixed Nav =====*/
+
 .navigation {
     display: flex;
     justify-content: center;
@@ -394,40 +395,16 @@ nav .visit:hover {
         About CSS
 ==========================*/
 
-@keyframes show {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 100%;
-    }
+.about {
+    height: 100vh;
 }
 
-@keyframes swipe {
-    from {
-        top: 55%;
-    } to {
-        top: 40%;
-    }
+.about .container {
+    position: relative;
 }
 
-@keyframes jump {
-    0%, 100% {
-        line-height: 6.5rem;
-    }
-    55% {
-        line-height: 8rem;
-    }
-}
-
-@keyframes iconJump {
-    0%, 100% {
-        scale: 1;
-    }
-    55% {
-        scale: 1.2;
-    }
-}
+/*===== Card Effects  =====*/
+/*===== Animation | Switch Button  =====*/
 
 .card.show-card {
     animation: show 1s forwards;
@@ -445,17 +422,8 @@ nav .visit:hover {
     animation: jump 0.7s ease-in-out;
 }
 
-.about {
-    height: 100vh;
-}
-
-.about .container {
-    position: relative;
-}
-
 .card.crismark {
     display: none;
-    opacity: 100%;
 }
 
 .changeCard {
@@ -506,6 +474,8 @@ nav .visit:hover {
     color: white;
     font-weight: 600;
 }
+
+/*===== Card =====*/
 
 .card {
     height: 60vh;
@@ -657,6 +627,16 @@ nav .visit:hover {
 
     display: grid;
     grid-template-rows: 90% auto;
+    opacity: 0;
+}
+
+.project-container.show-project {
+    animation: show 1s forwards;
+}
+
+.project-container.show-project .descriptions * {
+    opacity: 0;
+    animation: show 1s forwards 0.3s;
 }
 
 .project-container .thumbnails {
@@ -814,7 +794,19 @@ nav .visit:hover {
     box-shadow: 2px 2px 8px 0 var(--black);
     border-radius: 0.5rem;
     overflow: hidden;
+    opacity: 0;
 }
+
+.contact-container.show-contact {
+    animation: show 1s forwards;
+}
+
+.contact-container.show-contact .contact-details * {
+    opacity: 0;
+    animation: show 1s forwards 0.3s;
+}
+
+/*===== Form  =====*/
 
 .form {
     display: flex;
@@ -862,6 +854,21 @@ textarea {
     opacity: 0.5;
 }
 
+.send {
+    background-color: var(--black);
+    border: none;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.send:hover {
+    background-color: var(--accent);
+    color: var(--black);
+}
+
+/*===== Details =====*/
 
 .contact-details {
     background-color: var(--accent);
@@ -884,19 +891,6 @@ textarea {
     color: var(--accent);
 }
 
-.send {
-    background-color: var(--black);
-    border: none;
-    padding: 0.5rem;
-    margin-top: 2rem;
-    color: var(--accent);
-}
-
-.send:hover {
-    background-color: var(--accent);
-    color: var(--black);
-}
-
 /*==========================
         Footer CSS
 ==========================*/
@@ -904,4 +898,7 @@ textarea {
 footer {
     height: 50vh;
     background-color: #4D4B4B;
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
 }
