@@ -5,26 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yummy & Crismark</title>
-    <link rel="stylesheet" href="src/styles.css">
-    <script src="src/script.js" defer></script>
+    <link rel="stylesheet" href="src/CSS/styles.css">
+    <script src="src/Scripts/script.js" defer></script>
 </head>
 <body>
+    <div class="cursor"></div>
     <header id="home" class="snap">
         <div class="pop-up">
             <div class="container">
                 <nav>
-                    <div class="logo">
+                    <div class="logo pointer">
                         <div class="icon">YC</div>
                         <div class="brandname">Yummy & Crismark</div>
                     </div>
                     <div class="links">
-                        <a href="#">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
+                        <a href="#" class="pointer">Home</a>
+                        <a href="#about" class="pointer">About</a>
+                        <a href="#contact" class="pointer">Contact</a>
                     </div>
-                    <a href="https://github.com/YummyFran" class="visit" target="_blank" onclick="window.open('https://github.com/crismark025'); alert('Please turn off ad blocker to open both links.')">
+                    <a href="https://github.com/YummyFran" class="visit pointer" target="_blank" onclick="window.open('https://github.com/crismark025'); alert('Please turn off ad blocker to open both links.')">
                         <p>Visit Me</p>
-                        <img src="assets/github.svg" alt="github">
+                        <img src="assets/SVGs/github.svg" alt="github">
                     </a>
                 </nav>
                 <div class="banner center">
@@ -35,23 +36,25 @@
                             <p class="subhead">a <span id="desc">web developer</span></p>
                         </div>
                         <div class="purpose">
-                            <button class="cv">Download CV</button>
-                            <a href="#projects" class="projects">View Projects</a>
+                                <a href="./assets/files/Yummy Fran Resume.pdf" download="Palomares Resume" class="cv pointer" onclick="window.open('./assets/files/Yummy Fran Resume.pdf')">
+                                    Download CV
+                                </a>
+                            <a href="#projects" class="projects pointer">View Projects</a>
                         </div>
                     </div>
                     <div class="bottom">
                         <div class="socials">
-                            <a href="https://github.com/YummyFran" target="_blank">
-                                <img src="assets/github.svg" alt="github">
+                            <a href="https://github.com/YummyFran" target="_blank" class="pointer">
+                                <img src="assets/SVGs/github.svg" alt="github">
                             </a>
-                            <a href="https://www.facebook.com/oishi.palomares" target="_blank">
-                                <img src="assets/facebook.svg" alt="facebook">
+                            <a href="https://www.facebook.com/oishi.palomares" target="_blank" class="pointer">
+                                <img src="assets/SVGs/facebook.svg" alt="facebook">
                             </a>
-                            <a href="https://www.instagram.com/oi.sama/" target="_blank">
-                                <img src="assets/instagram.svg" alt="instagram">
+                            <a href="https://www.instagram.com/oi.sama/" target="_blank" class="pointer">
+                                <img src="assets/SVGs/instagram.svg" alt="instagram">
                             </a>
                         </div>
-                        <a class="scroll-down" href="#about">
+                        <a class="scroll-down pointer" href="#about">
                             <div class="arrow"></div>
                         </a>
                     </div>
@@ -63,28 +66,31 @@
         <div class="container">
             <nav>
                 <a href="#">
-                    <div class="logo">
+                    <div class="logo pointer">
                         <div class="icon">YC</div>
                         <div class="brandname">Yummy & Crismark</div>
                     </div>
                 </a>
                 <div class="links">
-                    <a href="#">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#" class="pointer">Home</a>
+                    <a href="#about" class="pointer">About</a>
+                    <a href="#contact" class="pointer">Contact</a>
                 </div>
-                <a href="https://github.com/YummyFran" class="visit" target="_blank" onclick="window.open('https://github.com/crismark025'); alert('Please turn off ad blocker to open both links.')">
+                <a href="https://github.com/YummyFran" class="visit pointer" target="_blank" onclick="window.open('https://github.com/crismark025'); alert('Please turn off ad blocker to open both links.')">
                     <p>Visit Me</p>
-                    <img src="assets/github.svg" alt="github">
+                    <img src="assets/SVGs/github.svg" alt="github">
                 </a>
             </nav>
         </div>
+    </div>
+    <div class="floating-button pointer">
+        <a href="#projects" class="floating-project-btn"></a>
     </div>
     <section class="about snap" id="about">
         <div class="container">
             <h2>About Us</h2>
             <input type="checkbox" class="changeCard" id="changecard">
-            <label for="changecard" class="cardbtn"></label>
+            <label for="changecard" class="cardbtn pointer"></label>
             <div class="card yummy">
                 <div class="one-third">
                     <div class="photo"></div>
@@ -105,11 +111,11 @@
                     <div class="skills">
                         <div class="title jump">SKILLS</div>
                         <div class="icons pop">
-                            <img class="hov" src="assets/html5.svg" alt="html 5" title="html 5">
-                            <img class="hov" src="assets/css3.svg" alt="css 3" title="css 3">
-                            <img class="hov" src="assets/js.svg" alt="js" title="javascript">
-                            <img class="hov" src="assets/react.svg" alt="react" title="react js">
-                            <img class="hov" src="assets/nodejs.svg" alt="node js" title="node js">
+                            <img class="hov pointer" src="assets/SVGs/html5.svg" alt="html 5" title="html 5">
+                            <img class="hov pointer" src="assets/SVGs/css3.svg" alt="css 3" title="css 3">
+                            <img class="hov pointer" src="assets/SVGs/js.svg" alt="js" title="javascript">
+                            <img class="hov pointer" src="assets/SVGs/react.svg" alt="react" title="react js">
+                            <img class="hov pointer" src="assets/SVGs/nodejs.svg" alt="node js" title="node js">
                         </div>
                     </div>
                     <div class="quote pop">
@@ -138,9 +144,9 @@
                     <div class="skills">
                         <div class="title jump">SKILLS</div>
                         <div class="icons pop">
-                            <img class="hov" src="assets/html5.svg" alt="html 5" title="html 5">
-                            <img class="hov" src="assets/css3.svg" alt="css 3" title="css 3">
-                            <img class="hov" src="assets/js.svg" alt="js" title="javascript">
+                            <img class="hov" src="assets/SVGs/html5.svg" alt="html 5" title="html 5">
+                            <img class="hov" src="assets/SVGs/css3.svg" alt="css 3" title="css 3">
+                            <img class="hov" src="assets/SVGs/js.svg" alt="js" title="javascript">
                         </div>
                     </div>
                     <div class="quote pop">
@@ -155,7 +161,7 @@
             <h2>Projects</h2>
             <div class="project-container">
                 <div class="thumbnails">
-                    <a class="thumbnail">
+                    <a class="thumbnail pointer">
                         <div class="picture coming-soon"></div>
                         <div class="descriptions">
                             <div class="act-title">
@@ -166,7 +172,7 @@
                             </p>
                         </div>
                     </a>
-                    <a href="https://yummyfran.github.io/Activity-1/" class="thumbnail" target="_blank">
+                    <a href="https://yummyfran.github.io/Activity-1/" class="thumbnail pointer" target="_blank">
                         <div class="picture" id="activity1"></div>
                         <div class="descriptions">
                             <div class="act-title">
@@ -177,7 +183,7 @@
                             </p>
                         </div>
                     </a>
-                    <a class="thumbnail">
+                    <a class="thumbnail pointer">
                         <div class="picture coming-soon"></div>
                         <div class="descriptions">
                             <div class="act-title">
@@ -204,21 +210,21 @@
                 <div class="form">
                     <div class="line1">
                         <p>Hello there, my name is</p>
-                        <input type="text" placeholder="your name here" class="nameInput">
+                        <input type="text" placeholder="your name here" class="nameInput pointer">
                     </div>
                     <p>and I'm looking for a team to help me with</p>
-                    <textarea placeholder="short project description" rows="5"></textarea>
+                    <textarea placeholder="short project description" rows="5" class="pointer"></textarea>
                     <div class="line1">
                         <p>You can reach me at</p>
-                        <input type="text" placeholder="your email address">
+                        <input type="text" placeholder="your email address" class="pointer">
                     </div>
-                    <button class="send">Send</button>
+                    <button class="send pointer">Send</button>
                 </div>
                 <div class="contact-details">
                     <div class="contact-info">
                         <div class="info number">+63995 671 7024</div>
                         <div class="info email">yumpalomares@gmail.com</div>
-                        <div class="info address">Sudtonggan, Basak, Lapu Lapu City</div>
+                        <div class="info address">Sudtonggan Basak, Lapu Lapu City</div>
                     </div>
                 </div>
             </div>
@@ -226,7 +232,7 @@
     </section>
     <footer>
         <div class="container">
-            <h2>Footer</h2>
+            Yummy Fran Palomares & Crismark Torejas | ©2023
         </div>
     </footer>
 </body>
