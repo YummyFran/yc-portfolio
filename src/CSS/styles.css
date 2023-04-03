@@ -120,7 +120,8 @@ section {
 }
 
 .cursor.clicked {
-    transition: 0.1s;
+    transition: 0.001s;
+    scale: 0.9;
 }
 
 .cursor.hovering {
@@ -975,10 +976,11 @@ textarea {
     background-color: var(--accent);
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .contact-details .contact-info {
-    position: relative;
+    position: absolute;
     left: -1.5rem;
     display: flex;
     flex-direction: column;
@@ -990,6 +992,20 @@ textarea {
     padding: 0.7rem 1.5rem;
     border: 1px solid var(--accent);
     color: var(--accent);
+}
+
+.map {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: luminosity;
+    display: none;
+}
+
+.contact-details:hover .map {
+    display: block;
 }
 
 /*==========================
